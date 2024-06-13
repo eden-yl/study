@@ -1,0 +1,8 @@
+다중 교환(Multi-switching): 다수의 작업 동시 실행, 포그라운드 프로그램만 동작
+단일 작업(Single-tasking): 한번에 하나의 작업만 처리
+다중 작업(Multi-tasking): 여러 개의 작업 동시 수행
+다중 사용자(Multi-user): 단일 프로세서에서 여러 사용자의 프로그램 실행
+대화형 처리(Interactive Processing): 대화형으로 작업 처리(시분할 처리 기능 필요)
+일괄 처리(Batch Processing): 여러 작업을 묶어 한번에 처리
+실시간 처리(Real Time Processing): 작업 처리가 지연없이 즉각 처리
+분산 처리(Distributed Processing): 여러 시스템을 연결해 작업을 나누어 처리
