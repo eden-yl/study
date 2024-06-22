@@ -1,0 +1,5 @@
+FIFO(First In First Out): 먼저 적재된 페이지 교체
+LRU(Least Recently Used): 가장 오랫동안 참조되지 않은 페이지 교체
+LFU(Least Frequently Used): 최근에 가장 적게 사용된(참조된) 페이지 교체
+NUR(Not Used Recently): 참조비트와 변형비트를 사용해 가장 오랫동안 참조되지 않은 페이지 교체(LRU의 변형)
+SCR(Second Chance Replacement): FIFO 알고리즘 보완하여 참조비트로 한번의 기회를 더 부여함
