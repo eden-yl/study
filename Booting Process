@@ -1,0 +1,12 @@
+1. BIOS(Basic Input Output System) 실행, POST(Power On Self Test) 수행
+2. MBR(Master Boot Record) 읽음 → 부트로더(LILO, GRUB) 로드
+3. 커널 이미지 로드
+4. 각 장치 드라이버 초기화, 파일 시스템 검사, init 프로세스 호출
+5. /etc/inittab 파일 참조
+- 런레벨 관련 파일
+6. /etc/rc.d/rc.sysinit 스크립트 실행
+- /etc/init/rcS.conf 파일 적용: 시스템 초기화 관련 설정 파일(rc.sysinit 스크립트 실행)
+7. 해당 런레벨에 맞는 /etc/rc.d/rc#.d/* 스크립트 실행
+8. /etc/rc.d/rc.local 스크립트 실행
+- 부팅 시 필요한 서비스를 이 스크립트 안에 등록
+9. 로그인 프롬프트 출력
