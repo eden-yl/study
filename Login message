@@ -1,0 +1,8 @@
+# 로그인 시 'login: ' 메시지 전 출력되는 내용 기록
+/etc/issue
+
+# /etc/issue와 동일한 역할, telnet 등 네트워크 접속 시 출력되는 내용 기록
+/etc/issue.net
+
+# 로그인 성공 시 보여주는 메시지(Message Of The Day) 기록
+/etc/motd
