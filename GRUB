@@ -2,3 +2,25 @@ GNU 프로젝트에서 만든 부트로더
 LILO에 비해 다양한 파일 시스템 지원, 부팅 시 커널 인자 조정하여 동적인 부팅 지원
 
 환경설정 파일: /boot/grub2/grub.cfg → 심볼릭 링크: /etc/grub2.cfg
+
+
+# GRUB 환경설정 파일 생성 -> 환경설정 파일 변경 후 반드시 실행 필요
+grub2-mkconfig [-o 파일명]
+
+# 환경설정 파일 생성
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+# root 패스워드 잊어버린 경우
+# 시스템 재부팅 후
+[e]
+
+# 커널 인자값 ro rhgb quite LANG=ko_KR.UTF-8을 지우고 아래 내용 입력
+rw init=/bin/sh
+
+# 부팅 진행
+[Ctrl] + [X]
+
+# GRUB 패스워드 설정
+vi /etc/grub.d/00_header
+# 위 파일 수정 후
+grub2-mkconfig
