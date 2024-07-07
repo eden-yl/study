@@ -1,0 +1,11 @@
+# 유닛의 환경설정 파일 위치
+/etc/systemd/system
+
+# 런타임 유닛 파일 위치
+/run/systemd/system
+
+# 시스템에서 사용되는 service, target 유닛 파일 위치
+/usr/lib/systemd/system
+
+# systemd 기반의 시스템 및 서비스 관리 제어
+systemctl [option] 명령 [서비스명]
