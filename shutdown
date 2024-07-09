@@ -1,0 +1,21 @@
+# 시스템 재시작 혹은 전원 종료
+# root 권한자만 가능
+shutdown [option] 시간 [경고메시지]
+
+# 시스템 즉시 재부팅
+shutdown -r now
+
+# 시스템 즉시 종료
+shutdown -h now
+
+# 시스템을 10분 뒤 종료
+shutdown -h +10
+
+# 예약된 셧다운 명령 취소
+shutdown -c
+
+# 23시 59분에 시스템 종료 예약
+shutdown -h 23:59
+
+# 실제 셧다운하지 않고 경고 메시지만 접속 사용자에게 전송
+shutdown -k
