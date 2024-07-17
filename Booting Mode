@@ -1,0 +1,12 @@
+# 부팅 모드 확인
+systemctl get-default
+# graphical.target -> 시스템 부팅 시 X 윈도 모드로 동작
+
+# 부팅 모드 변경
+systemctl set-default TARGET_NAME
+# multi-user.target -> 콘솔 모드(init 체제의 runlevel 3)로 전환, 텍스트 기반 로그인만 지원
+# = runlevel3.target
+# = runlevel3
+# graphical.target -> X 윈도(init 체제의 runlevel 5)로 전환, 텍스트 기반 외 X 기반 로그인 지원
+# = runlevel5.target
+# = runlevel5
