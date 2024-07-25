@@ -1,0 +1,6 @@
+GUI 환경 이용을 위해 사용자에게 제공되는 인터페이스 스타일
+윈도 매니저를 포함해 파일 관리자, 아이콘, 창, 도구 모음, 폴더, 배경화면, 데스크톱 위젯, DnD, 프로세스 간 통보 기능 지원
+
+KDE(K Desktop Environment): Qt 라이브러리 기반
+GNOME(GNU Network Object Model Environment): GNU 프로젝트의 일환, GTK+ 라이브러리 기반
+* GNOME의 파일 관리자: nautilus → metacity → Mutter
