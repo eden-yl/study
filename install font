@@ -1,0 +1,33 @@
+sudo yum install fontconfig
+
+# Naver Nanum Font
+curl -o nanumfont.zip http://cdn.naver.com/naver/NanumFont/fontfiles/NanumFont_TTF_ALL.zip 
+sudo unzip -d /usr/share/fonts/nanum nanumfont.zip
+
+# Update font cache
+sudo fc-cache -f -v
+
+/usr/share/fonts: caching, new cache contents: 0 fonts, 2 dirs
+/usr/share/fonts/nanum: caching, new cache contents: 8 fonts, 0 dirs
+/usr/share/fonts/truetype: caching, new cache contents: 0 fonts, 1 dirs
+/usr/share/fonts/truetype/dejavu: caching, new cache contents: 6 fonts, 0 dirs
+/usr/local/share/fonts: caching, new cache contents: 0 fonts, 0 dirs
+/home/lesstif/.local/share/fonts: skipping, no such directory
+/home/lesstif/.fonts: skipping, no such directory
+/var/cache/fontconfig: cleaning cache directory
+/home/lesstif/.cache/fontconfig: not cleaning non-existent cache directory
+/home/lesstif/.fontconfig: not cleaning non-existent cache directory
+fc-cache: succeeded
+
+# Check available font list
+fc-list | grep -i nanum
+
+/usr/share/fonts/nanum/NanumGothicExtraBold.ttf: NanumGothic,나눔고딕,NanumGothicExtraBold,나눔고딕 ExtraBold:style=ExtraBold,Regular,Bold
+/usr/share/fonts/nanum/NanumMyeongjoExtraBold.ttf: NanumMyeongjo,나눔명조,NanumMyeongjoExtraBold,나눔명조 ExtraBold:style=ExtraBold,Regular
+/usr/share/fonts/nanum/NanumGothicBold.ttf: NanumGothic,나눔고딕:style=Bold
+/usr/share/fonts/nanum/NanumMyeongjo.ttf: NanumMyeongjo,나눔명조:style=Regular
+/usr/share/fonts/nanum/NanumGothic.ttf: NanumGothic,나눔고딕:style=Regular
+/usr/share/fonts/nanum/NanumMyeongjoBold.ttf: NanumMyeongjo,나눔명조:style=Bold
+/usr/share/fonts/nanum/NanumBrush.ttf: Nanum Brush Script,나눔손글씨 붓:style=Regular
+/usr/share/fonts/nanum/NanumPen.ttf: Nanum Pen Script,나눔손글씨 펜:style=Regular
+
