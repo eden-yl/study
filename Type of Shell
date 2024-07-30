@@ -1,0 +1,18 @@
+Bourne Shell
+스티븐 본이 개발, 강력한 명령 프로그래밍 언어 기능
+상호 대화형(interactive) 방식 미사용
+
+C Shell(csh)
+빌 조이가 개발, C 언어와 유사한 언어 사용
+상호 대화형 방식으로 구성
+
+Korn Shell(ksh)
+데이브 콘이 개발, 편리한 사용과 탁월한 기능
+명령행 편집 기능 제공
+
+Bash(Bourne-Again Shell)
+브라이언 폭스가 개발, sh 호환의 명령어 해석기
+처음 로그인 시 디폴트로 주어지는 셸
+
+dash(Debian Almquist Shell)
+POSIX와 호환되는 /bin/sh를 최대한 작게 구현한 셸로 빠른 작업 수행이 특징
