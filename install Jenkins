@@ -1,0 +1,84 @@
+# apt-get 업데이트
+apt-get update
+
+### 필수 명령어 미리 설치
+# if sudo command not found
+apt-get install sudo
+
+# if vi command not found
+apt-get install vim
+
+# if wget command not found
+apt-get install wget
+
+# if curl command not found
+apt-get install curl
+
+# if ufw command not found
+apt-get install ufw
+
+# JDK 설치
+sudo apt-get install openjdk-17-jdk
+
+# JDK 설치 확인
+ls /usr/lib/jvm/java-17-openjdk-amd64
+
+# JDK 환경변수 설정
+vi /etc/environment
+   # 위 파일에 아래 내용 추가
+   JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+
+# 환경변수 적용
+source /etc/environment
+
+# 적용된 환경변수 확인
+echo #JAVA_HOME
+
+# Jenkins Key 설치
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+# Jenkins 설치
+sudo apt-get update
+sudo apt-get install jenkins
+
+# Jenkins 상태 확인
+sudo systemctl status jenkins
+
+# Jenkins 시작
+sudo systemctl start jenkins
+
+# 8080 port 확인
+sudo ufw status
+
+# 활성화
+sudo ufw allow 8080
+sudo ufw allow OpenSSH
+sudo ufw enable
+sudo ufw status
+
+# 혹은 Jenkins 기본 port 변경
+sudo vi /etc/default/jenkins
+   # 위 파일 아래처럼 수정
+   HTTP_PORT=9090
+
+sudo vi /etc/init.d/jenkins
+   # 위 파일 아래처럼 수정
+   check_tcp_port "http" "${HTTP_PORT}" "9090" "${HTTP_HOST}" "0.0.0.0" || return 2
+
+## 참고
+sudo vi /lib/systemd/system/jenkins.service
+   # 위 파일 아래처럼 수정
+   Environment="JENKINS_PORT=9090"
+
+# Jenkins 접속
+## 브라우저에서 http://{IP}:{PORT}로 접속
+## ex. http://127.0.0.1:9090
+## Unlock Jenkins 관련 화면 나오면 아래 경로로 들어가 패스워드를 찾아서 브라우저에 입력하면 됨
+sudo cat /var/lib/jenkins/secrets/initialiAdminPassword
+
+
