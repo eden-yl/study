@@ -17,6 +17,9 @@ apt-get install curl
 # if ufw command not found
 apt-get install ufw
 
+# if pstree command not found
+apt-get install psmisc
+
 # JDK 설치
 sudo apt-get install openjdk-17-jdk
 
