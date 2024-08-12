@@ -1,0 +1,46 @@
+# update
+apt-get update
+
+# sudo command not found
+apt-get install sudo -y
+
+# systemctl command not found
+sudo apt-get install systemd -y
+
+# vi command not found
+sudo apt-get install vim -y
+
+# netstat command not found
+sudo apt install net-tools
+
+# SVN 설치
+sudo apt install subversion
+
+# svn 폴더 생성
+sudo mkdir -p /home/svn
+
+# repository 생성
+sudo svnadmin create /home/svn/kioti-dev
+
+# 그룹 생성
+sudo groupadd svn
+sudo chgrp svn /home/svn/
+sudo chmod g+w /home/svn/
+
+# 사용자 생성
+sudo useradd admin -g svn
+sudo usermod -a -G svn admin
+
+# 권한 설정
+sudo vim /home/svn/kioti-dev/conf/authz
+
+[/]
+admin=rw
+
+# 비밀번호 설정
+sudo vim /home/svn/kioti-dev/conf/passwd
+
+[users]
+admin=1234
+
+
