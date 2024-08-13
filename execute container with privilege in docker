@@ -1,0 +1,5 @@
+# 다운받은 centos7 이미지를 priv라는 이름으로 관리자 권한을 더해 실행
+docker run -it -d --privileged --name priv centos:7 /sbin/init
+
+# 위에서 실행한 이미지에 접속
+docker exec -it priv bash
