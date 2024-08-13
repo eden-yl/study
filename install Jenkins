@@ -3,22 +3,22 @@ apt-get update
 
 ### 필수 명령어 미리 설치
 # if sudo command not found
-apt-get install sudo
+apt-get install sudo -y
 
 # if vi command not found
-apt-get install vim
+apt-get install vim -y
 
 # if wget command not found
-apt-get install wget
+apt-get install wget -y
 
 # if curl command not found
-apt-get install curl
+apt-get install curl -y
 
 # if ufw command not found
-apt-get install ufw
+apt-get install ufw -y
 
 # if pstree command not found
-apt-get install psmisc
+apt-get install psmisc -y
 
 # JDK 설치
 sudo apt-get install openjdk-17-jdk
