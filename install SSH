@@ -1,0 +1,57 @@
+# update package
+sudo apt update
+sudo apt upgrade
+
+# install open ssh server(when it's done, automatically executed)
+sudo apt install openssh-server
+
+
+# check ssh server status
+sudo systemctl status ssh
+
+# if it's inactive, execute
+sudo systemctl start ssh
+
+# config
+vi /etc/ssh/sshd_config
+# may change the default port
+
+# restart
+sudo service ssh restart
+
+# reload ufw
+sudo ufw allow {new port}/tcp
+
+# create user
+sudo adduser guest
+
+# sftp config
+vi /etc/ssh/sshd_config
+
+Subsystem sftp /usr/lib/openssh/sftp-server -> Subsystem sftp internal-sftp
+
+Match Group filetransfer
+  ChrootDirectory %h
+  X11Forwarding no
+  AllowTcpForwarding no
+  ForceCommand internal-sftp
+
+# restart
+service ssh restart
+
+# add group
+sudo addgroup --system filetransfer
+
+# set group for user
+usermod -G filtertransfer guest
+chown root:root /home/guest
+chmod 755 /home/guest
+
+# grant permission
+cd /home/guest
+mkdir request respond
+chown guest:filtertransfer request
+# /home/guest/respond -> read only
+# /home/guest/request -> read & write
+
+
