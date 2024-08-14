@@ -1,0 +1,5 @@
+# rocky linux
+
+# ps command not found
+dnf install procps
+
