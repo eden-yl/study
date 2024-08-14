@@ -21,7 +21,7 @@ apt-get install ufw -y
 apt-get install psmisc -y
 
 # JDK 설치
-sudo apt-get install openjdk-17-jdk
+sudo apt-get install java-17-openjdk
 
 # JDK 설치 확인
 ls /usr/lib/jvm/java-17-openjdk-amd64
