@@ -35,7 +35,7 @@ vi /etc/environment
 source /etc/environment
 
 # 적용된 환경변수 확인
-echo #JAVA_HOME
+echo $JAVA_HOME
 
 # Jenkins Key 설치
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \

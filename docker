@@ -1,0 +1,14 @@
+# 현재 실행 중인 컨테이너 확인
+docker ps
+
+# 생성된 모든 컨테이너 확인
+docker ps -a
+
+# privleged 권한으로 실행
+docker run -it --privileged --name rocky rockylinux:9
+# 해당 명령 실행 시 별도 실행하지 않아도 bash 자동 실행됨
+# 다만 2024. 8. 19 기준 privileged 권한이 부여되지 않는 오류 확인
+
+# docker 실행
+docker exec -it rocky /bin/bash
+
