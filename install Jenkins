@@ -107,6 +107,7 @@ source /etc/profile
 
 # install Jenkins GPG Key
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+dnf clean packages
 
 # register Jenkins repo
 dnf config-manager --add-repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
