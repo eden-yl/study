@@ -1,3 +1,4 @@
+##### Ubuntu #####
 # apt-get 업데이트
 apt-get update
 
@@ -84,4 +85,40 @@ sudo vi /lib/systemd/system/jenkins.service
 ## Unlock Jenkins 관련 화면 나오면 아래 경로로 들어가 패스워드를 찾아서 브라우저에 입력하면 됨
 sudo cat /var/lib/jenkins/secrets/initialiAdminPassword
 
+
+##### Redhat #####
+# rocky linux
+
+# install java 17
+dnf install java-17-openjdk
+dnf install java-17-openjdk-devel.x86_64
+
+# set environment path
+which javac
+# 결과: /usr/bin/javac
+
+readlink -f /usr/bin/javac
+# 결과: /usr/lib/jvm/java-17-openjdk-17.0.12.0.7-2.el9.x86_64/bin/javac
+
+vi /etc/profile
+   export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-17.0.12.0.7-2.el9.x86_64
+
+source /etc/profile
+
+# install Jenkins GPG Key
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+# register Jenkins repo
+dnf config-manager --add-repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+# No such command: dnf config-manager
+sudo yum install dnf-plugins-core
+
+# register again
+
+# install Jenkins
+dnf install jenkins
+
+# execute
+systemctl start jenkins
 
