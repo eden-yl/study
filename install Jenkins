@@ -123,3 +123,5 @@ dnf install jenkins
 # execute
 systemctl start jenkins
 
+# modify port(default: 8080)
+vi /usr/lib/systemd/system/jenkins.service
