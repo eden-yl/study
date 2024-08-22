@@ -1,0 +1,9 @@
+# from local window to remote server
+scp {local window path}\{file name} {user}@{remote server ip}:{path}
+
+# example)
+scp C:\scp.txt test@192.168.x.x:/home/test
+
+# {user}@{remote server ip}'s password: 
+# 연결할 계정의 비밀번호 입력 후 권한이 부여된 경로에 파일 전송
+
