@@ -1,0 +1,14 @@
+which javac
+# /bin/javac
+
+readlink -f /bin/javac
+# /usr/lib/jvm/java-17-openjdk-17.0.12.0.7-2.el9.x86_64
+
+vi ~/.bash_profile
+
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-17.0.12.0.7-2.el9.x86_64
+
+source ~/.bash_profile
+
+echo $JAVA_HOME
+javac -version
