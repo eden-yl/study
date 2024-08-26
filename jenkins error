@@ -1,0 +1,9 @@
+#####
+Exception in thread "main" java.lang.AssertionError: java.lang.ClassNotFoundException: winstone.Launcher at executable.Main.main(Main.java:279)
+
+
+# 보안 해제
+setenforce 0
+
+systemctl stop fapolicyd
+
