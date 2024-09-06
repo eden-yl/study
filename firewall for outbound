@@ -1,3 +1,6 @@
+# before RHEL7: iptables command
+# from RHEL7: firewall-cmd command
+
 # allow outbound for 20.7.178.24 (updates.jenkins.io)
 sudo firewall-cmd --direct --permanent --add-rule ipv4 filter OUTPUT 1 -d 20.7.178.24 -p TCP -j ACCEPT
 
