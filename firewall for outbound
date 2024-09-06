@@ -1,0 +1,6 @@
+# allow outbound for 20.7.178.24 (updates.jenkins.io)
+sudo firewall-cmd --direct --permanent --add-rule ipv4 filter OUTPUT 1 -d 20.7.178.24 -p TCP -j ACCEPT
+
+# allow 443 port for outbound (not specifying IP)
+sudo firewall-cmd --direct --permanent --add-rule ipv4 filter OUTPUT 0 -p tcp --dport=443 -j ACCEPT
+
