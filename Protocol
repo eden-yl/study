@@ -1,3 +1,16 @@
+# 구성 요소
 구문(Syntax): 데이터의 구조나 형식
 의미(Semantics): 전송의 조작이나 오류 제어를 위한 제어 정보 규정
 순서(Timing): 접속된 개체 간 통신 속도의 조정이나 메시지 순서 제어
+
+# 기능
+주소 지정(Addressing)
+순서 지정(Sequencing)
+단편화와 재조합(Fragmentation and Reassembly)
+흐름 제어(Flow Control)
+오류 제어(Error Control): checksum 기능
+연결 제어(Connection Control)
+동기화(Synchronization)
+멀티플렉싱(Multiplexing)
+전송 서비스(Transmission Service)
+캡슐화(Encapsulation)
