@@ -14,3 +14,17 @@
 멀티플렉싱(Multiplexing)
 전송 서비스(Transmission Service)
 캡슐화(Encapsulation)
+
+# 제정 기관
+ISO(International Organization for Standardization): 산업 및 통상 표준의 문제점 해결을 위해 국제 통용 표준 개발 보급(OSI 7 계층)
+
+IEEE(Institute of Electrical and Electronics Engineers): 전기전자공학에 관한 최대 기술 조직으로 주요 표준 및 연구 정책 발전(LAN 및 MAN 관련 표준인 IEEE 802)
+
+ANSI(American National Standards Institute): ISO에 가입되어 있는 미국의 산업 표준 제정 기관(ASCII 코드)
+
+EIA(Electronic Industries Alliance): 미국 전자 산업 협회로 전자 산업과 관련된 각종 조사, 제안, 규격 제정 등(RS-232C, EIA-754, LAN용 트위스트 페어 케이블 규격인 EIA/TIA-568B)
+
+ITU-T(International Telecommunication Union Telecommunication Standardization Sector): 국제 연합 산하기구로 전기 통신의 개선과 효율적 사용을 위해 국제 협력을 증진시키고 전기 통신 업무 능률 향상, 이용 증대 및 보급
+
+* ICANN: IP 및 도메인 관리, 프로토콜의 범주와 포트 번호 할당, DNS 관련 기능 감독, 도메인 분쟁 조율과 중재 등
+
