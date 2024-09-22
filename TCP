@@ -1,0 +1,9 @@
+# 정의
+1960년대 말 미국방성(DARPA)에서 연구를 시작, 1980년대 초에 공개된 프로토콜
+컴퓨터 기종에 관계없이 정보 교환을 가능케 하는 통신 프로토콜
+
+응용 계층: HTTP, SMTP, POP3, IMAP, DNS, NFS, FTP, TELNET, SSH 등
+전송 계층: TCP, UDP 등
+인터넷 계층: IP(V4, V6), ICMP, ARP 등
+네트워크 인터페이스 계층: Ethernet, Token Ring, FDDI 등
+
