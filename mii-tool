@@ -1,0 +1,8 @@
+# 네트워크 인터페이스 상태 점검 및 설정
+mii-tool [option] [네트워크_장치명]
+
+# enp1s0f0을 강제로 100baseTX-FD로 설정하고 관려 정보 자세히 출력
+mii-tool -v --force 100baseTX-FD enp1s0f0
+
+# enp1s0f0 네트워크 인터페이스 재인식
+mii-tool -r enp1s0f0
