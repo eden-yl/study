@@ -1,0 +1,6 @@
+# 이더넷 카드 설정 정보 출력 및 변경
+ethool [네트워크_장치명]
+
+# enp0s3 설정 변경
+ethool -s enp0s3 speed 1000 duplex full autoneg off
+# --change 옵션과 동일
