@@ -1,0 +1,5 @@
+# 패킷이 특정 호스트까지 라우팅되는 과정 출력 -> 라우팅 과정에 장애 발생 시 위치 파악 가능
+traceroute Hosename 또는 IP_Address
+
+# www.ihd.or.kr까지 라우팅되는 과정 출력
+traceroute www.ihd.or.kr
