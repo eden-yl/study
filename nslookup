@@ -1,0 +1,8 @@
+# DNS를 이용해 도메인이나 IP 조회
+nslookup [option] Hostname 또는 IP_Address
+
+# 현재 설정된 네임서버 정보와 함께 exam.ihd.or.kr의 IP 출력
+nslookup exam.ihd.or.kr
+
+# naver.com의 메일서버 설정 정보 출력
+nslookup -type=mx naver.com
