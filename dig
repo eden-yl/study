@@ -1,0 +1,11 @@
+# 도메인명(FQDN, Fully Qualified Domain Name)으로 정보 조회
+dig [option] 도메인명 [type]
+
+# www.ihd.or.kr의 IP 정보 출력
+dig www.ihd.or.kr
+
+# ihd.or.kr의 메일서버 정보 출력
+dig ihd.or.kr MX
+
+# ihd.or.kr의 네임서버 정보 출력
+dig -t ns ihd.or.kr
