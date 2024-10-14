@@ -1,0 +1,14 @@
+
+@Component
+개발자가 직접 작성한 Class를 Bean으로 등록하기 위한 어노테이션
+추가 정보가 없을 경우 Class 이름을 CamelCase로 변경한 것이 Bean ID로 사용됨.
+이름을 지정하려면 value 사용
+
+ex.
+@Component(value="mystudent")
+public class Student {
+  public Student() {
+    System.out.println("hi");
+  }
+}
+
