@@ -1,0 +1,8 @@
+# 도메인명으로 정보 조회
+host [option] 도메인명
+
+# ihd.or.kr의 IP 정보 출력
+host ihd.or.kr
+
+# ihd.or.kr 도메인명 설정과 관련된 자세한 정보 출력
+host -v ihd.or.kr
