@@ -1,0 +1,11 @@
+# 시스템에 설정된 호스트명 출력 및 설정
+hostname [option] [hostname]
+
+# 설정된 호스트명 출력
+hostname
+
+# 호스트에 설정된 FQDN 출력
+hostname -f
+
+# 호스트명을 www.ihd.or.kr로 설정
+hostname www.ihd.or.kr
