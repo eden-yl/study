@@ -1,0 +1,8 @@
+# 등록된 도메인 정보 확인 -> yum install whois로 설치 가능
+whois [option] URL
+
+# ihd.or.kr 도메인 정보 출력
+whois ihd.or.kr
+
+# whois.nic.or.kr 서버에서 ihd.or.kr 도메인 정보 조회 후 출력
+whois -h whois.nic.or.kr ihd.or.kr
