@@ -1,0 +1,11 @@
+# HTTP(S), FTP 프로토콜 기반 웹 URL을 이용해 다운로드
+wget [option] URL
+
+# http-2.4.52.tar.bz2 파일을 현재 디렉터리에 다운로드
+wget https://dlcdn.apache.org//httpd/httpd-2.4.52.tar.bz2
+
+# www.posein.org의 첫 페이지인 index.html 다운로드
+wget http://www.posein.org
+
+# www.posein.org 사이트의 모든 콘텐츠 다운로드
+wget -r -l 0 http://posein.org
