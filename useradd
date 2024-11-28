@@ -1,0 +1,4 @@
+/etc/default/useradd
+
+계정 생성 시 기본 적용되는 설정
+useradd -D 명령으로 내용 확인 가능
