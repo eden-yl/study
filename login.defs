@@ -1,0 +1,54 @@
+메일 디렉터리, 패스워드 관련 설정(최대.최소 사용기한, 최소 길이, 만료 이전 경고 날짜), UID 최솟값 및 최댓값, GID 최솟값 및 최댓값, 홈 디렉터리 생성 여부, 기본 umask 값, 패스워드 암호화 알고리즘 등 정의
+
+
+
+# 사용자의 메일 디렉터리 지정
+MAIL_DIR    /var/spool/mail
+
+# 패스워드 최대 사용기한 지정
+PASS_MAX_DAYS    99999
+
+# 패스워드 변경 후 사용하는 최소 기간(0이면 변경 제한 없음)
+PASS_MIN_DAYS    0
+
+# 패스워드 최소 길이
+PASS_MIN_LEN    5
+
+# 패스워드 만료일 도래 전 경고 보여주는 날짜
+PASS_WARN_AGE    7
+
+# UID 최솟값 지정(사용자 추가 시 해당 UID부터 할당)
+UID_MIN    1000
+
+# UID 최댓값 지정(사용자 추가 시 해당 UID까지 할당)
+UID_MAX    60000
+
+# 시스템 계정 UID 최솟값 지정
+SYS_UID_MIN    201
+
+# 시스템 계정 UID 최댓값 지정
+SYS_UID_MAX    999
+
+# GID 최솟값 지정
+GID_MIN    1000
+
+# GID 최댓값 지정
+GID_MAX    60000
+
+# 시스템 계정 GID 최솟값 지정
+SYS_GID_MIN    201
+
+# 시스템 계정 GID 최댓값 지정
+SYS_GID_MAX    999
+
+# 사용자 추가 시 홈 디렉터리 생성 여부 지정
+CREATE_HOME    yes
+
+# 사용자 umask 값 설정
+UMASK    077
+
+# 사용자 삭제 시 해당 그룹도 함께 삭제
+USERGROUPS_ENAB    yes
+
+# 사용자 패스워드 암호화 알고리즘 설정
+ENCRYPT_METHOD    SHA512
