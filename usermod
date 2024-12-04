@@ -1,0 +1,17 @@
+# posein 사용자 홈 디렉터리를 /home2/posein으로 변경, 내용도 새로운 위치로 이동
+usermod -d /home2/posein -m posein # 새로운 디렉터리는 미리 생성해야 함
+
+# drone 사용자 그룹을 terran으로 변경
+usermod -g terran drone
+
+# posein 사용자 셸을 /bin/false로 변경, 실존하는 셸이 아니므로 일시적으로 사용자 계정 제한
+usermod -s /bin/false posein
+
+# jalin 사용자 계정 만기일을 지정
+usermod -e 2020-12-22 jalin
+
+# posein 사용자를 IHD 그룹에 추가로 속하게 함
+usermod -G IHD posein
+
+# posein 사용자를 yuloje로 변경(홈 디렉터리도 변경)
+usermod -l yuloje -d /home/yuloje -m posein
