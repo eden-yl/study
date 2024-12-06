@@ -1,0 +1,5 @@
+# posein 사용자 삭제
+userdel posein
+
+# 계정과 함께 홈 디렉터리와 그 하위 모두, 메일 관련 파일도 삭제(--remove)
+userdel -r posein
