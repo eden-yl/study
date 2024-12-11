@@ -1,0 +1,11 @@
+# 사용자 패스워드 변경
+chpasswd [option] [ < 파일]
+
+# 암호화된 패스워드 값 사용
+chpasswd -e
+
+# 패스워드 암호화 알고리즘 지정(DES, MD5, SHA256, SHA512)
+chpasswd -c
+
+# 암호화 알고리즘으로 MD5를 사용
+chpasswd -m
