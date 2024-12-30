@@ -1,0 +1,8 @@
+# 로그인한 다른 사용자에게 메시지 전송
+write 사용자 [ttyname]
+
+# posein 사용자에게 메시지 전송
+write posein
+
+# tty2의 posein 사용자에게 메시지 전송
+write posein /dev/tty2
