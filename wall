@@ -1,0 +1,4 @@
+# 로그인한 모든 사용자의 터미널에 메시지 전송(입력 후 [ctrl]+[d] 누르면 전송됨)
+wall 메시지
+
+wall "After 5 minutes, the system shutdown."
