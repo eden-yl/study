@@ -1,0 +1,17 @@
+# lin, joon 사용자에게 메일 전송
+mail lin joon
+
+# "greeting"이라는 제목의 메일을 yuloje 사용자에게 전송
+mail -s "greeting" yuloje
+
+# 작성된 파일 내용을 lin 사용자에게 메일로 전송
+mail lin < hello.txt
+
+# 도메인 지정하여 메일 전송
+mail posein@naver.com
+
+# /etc/passwd 파일 내용을 "Server account List"라는 제목으로 메일 전송
+mail -s "Server account List" posein@naver.com < /etc/passwd
+
+# '.old'로 끝나는 파일을 찾아 해당 파일 목록을 "old filenames"라는 제목으로 메일 전송
+find . -name "*.old" | mail -s "old filenames" posein@naver.com
