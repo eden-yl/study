@@ -1,0 +1,4 @@
+/etc/group
+
+기본 구조
+group name:password:GID:member list
