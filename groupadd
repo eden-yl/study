@@ -1,0 +1,8 @@
+# terran 그룹 생성
+groupadd terran
+
+# 생성과 동시에 GID 부여
+groupadd -g 999 terran
+
+# 시스템 그룹으로 생성
+groupadd -r terran
