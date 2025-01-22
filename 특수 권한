@@ -1,0 +1,8 @@
+[문자 모드]
+Set-UID, Set-GID → a
+Sticky-Bit → t
+
+[숫자 모드]
+Set-UID → 4
+Set-GID → 2
+Sticky-Bit → 1
