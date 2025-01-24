@@ -1,0 +1,46 @@
+# 파일, 디렉터리 권한 변경
+chmod [option] mode file(s)
+
+# 모든 사용자에게 모든 권한 부여
+chmod ugo+rwx aa.txt
+chmod a+rwx aa.txt
+chmod 777 aa.txt
+
+# 소유자는 읽기/쓰기/실행 가능, 그룹 및 다른 사용자는 읽기/실행 가능
+chmod 755 aa.txt
+
+# 현재 디렉터리 안의 모든 파일을 다른 사용자가 읽기/쓰기 금지
+chmod o-r,o-w *
+
+# .txt 파일에 대해 모든 사용자에게 읽기 권한 부여
+chmod a+r *.txt
+
+# /etc/fstab 파일을 다른 사용자가 읽기만 가능
+# = 기호는 기존 권한을 초기화한 후 지정한 권한만 설정
+chmod o=r /etc/fstab
+
+# 하위 디렉터리 포함해 현재 디렉터리의 모든 파일에 대해 그룹 및 다른 사용자 접근 금지
+chmod -R go-rwx *
+
+# a.txt 파일에 어떠한 권한도 설정하지 않음
+chmod a= a.txt
+chmod 0 a.txt
+
+# 소유자에게 어떠한 권한도 설정하지 않고, 그룹 및 다른 사용자에게 읽기/쓰기 권한 부여
+chmod 66 a.txt
+
+# Set-UID 설정
+chmod u+s a.out
+
+# Set-GID 설정
+chmod g+s a.out
+
+# data 디렉터리에 Sticky-Bit 설정
+chmod o+t data/
+
+# /project 디렉터리에 Set-GID 부여하고, 그룹 사용자 간 공유 모드(Sticky-Bit)로 사용
+chmod g+s,o+t /project
+
+# /project 디렉터리를 해당 그룹에 속한 사용자만 접근하고 파일 생성/삭제 가능
+# 그룹 소유권 자동 지정(Set-GID), 공유(Sticky-Bit)하여 사용
+chmod 3070 /project
