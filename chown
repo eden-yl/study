@@ -1,0 +1,15 @@
+# 파일, 디렉터리 (그룹)소유권 변경
+chown [option] owner[:group] file(s)
+
+# 하위 디렉터리 포함해 현재 디렉터리의 모든 파일 소유자를 posein으로 변경
+chown -R posein *
+
+# 파일 소유자는 posein, 소유 그룹은 yuloje로 설정
+chown posein:yuloje jalin.txt
+chown posein.yuloje jalin.txt
+
+# 파일 소유자를 UID가 500인 사용자로 설정
+chown 500 jalin.txt
+
+# 파일 그룹 소유권을 yuloje로 설정
+chown :yuloje joon.txt
