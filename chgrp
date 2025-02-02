@@ -1,0 +1,11 @@
+# 파일, 디렉터리의 소유 그룹 변경
+chgrp [option] group file(s)
+
+# 파일 그룹 소유권을 admin으로 변경
+chgrp admin alin.jpg
+
+# 원본 파일 소유권은 그대로 둔 채 심볼릭 링크 파일의 그룹 소유권만 변경
+chgrp -h
+
+# posein 사용자의 홈 디렉터리를 포함한 모든 파일, 디렉터리 그룹 소유권을 ihd로 변경
+chgrp -R ihd ~posein
