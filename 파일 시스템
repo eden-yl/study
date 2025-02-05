@@ -1,0 +1,26 @@
+디스크 인식 여부 확인 → 파티션 작업 → 시스템 재부팅 → 파일 시스템 생성 → 디렉터리(마운트 포인트) 생성 → 마운트 작업 → 마운트 및 용량 확인 → 부팅 시 자동 마운트되도록 /etc/fstab 파일에 등록
+
+# 디스크 인식 여부 확인
+fdisk -l
+
+# 시스템 재부팅
+partprobe
+# or
+reboot
+
+# 파일 시스템 생성
+mkfs.xfs /dev/sdb1
+
+# 디렉터리 생성
+mkdir /backup
+
+# 마운트 작업
+mount -t xfs /dev/sdb1 /backup
+
+# 마운트 및 용량 확인
+mount
+df -h
+
+# /etc/fstab 파일 등록
+vi /etc/fstab
+/dev/sdb1    /backup    xfs    defaults    1    1
