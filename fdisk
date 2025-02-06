@@ -1,0 +1,11 @@
+# 디스크 파티션 확인/추가/삭제 -> 설정 후 반드시 재부팅 필요
+fdisk [option] [장치파일명]
+
+# 장착된 디스크 파티션 테이블 정보 출력
+fdisk -l
+
+# /dev/sdb 디스크 파티션 설정
+fdisk /dev/sdb
+
+# /dev/sda9 파티션 크기 출력
+fdisk -s /dev/sda9
