@@ -1,0 +1,11 @@
+# 새로운 파일 시스템 생성(root만 가능, 유형 지정하지 않으면 ext2)
+mkfs [-t fs_type] [option] 장치명
+
+# /dev/sdc1을 xfs으로 파일 시스템 생성
+mkfs -t xfs /dev/sdc1
+
+# /dev/sdb1을 ext4로 파일 시스템 생성
+mkfs -t ext4 /dev/sdb1
+
+# /dev/hdb1을 ext2로 파일 시스템 생성
+mkfs -t ext2 /dev/hdb1
