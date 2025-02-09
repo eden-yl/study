@@ -1,0 +1,15 @@
+# ext2, 3, 4 파일 시스템 생성
+mke2fs [option] 장치명
+
+# /dev/sdb1 장치 파일 시스템을 ext3으로 생성
+mke2fs -j /dev/sdb1
+
+# /dev/sdc1 장치의 파일 시스템을 ext4로 생성
+mke2fs -ext4 /dev/sdc1
+
+# RAID 장치인 /dev/md0를 ext3 파일 시스템으로 생성, 블록 사이즈를 4096바이트로 설정
+# stripe당 블록 사이즈는 32바이트로 설정
+mke2fs -j -b 4096 -R stripe=32 /dev/md0
+
+# /dev/hda7를 ext3으로 생성, I-node 크기를 1MB로 지정
+mke2fs -j -T largefile /dev/hda7
