@@ -1,0 +1,4 @@
+Java 람다식
+
+forEach 중간에서 return하면 반복문의 continue 효과를 낼 수 있음
+
