@@ -1,0 +1,5 @@
+exec sp_helpindex '[TABLE]';
+GO
+
+Review the index_description column. A table can have only one clustered index. If a clustered index has been implemented for the table, the index_description will contain the word 'clustered'.
+If no clustered index is present, the table is a heap.
