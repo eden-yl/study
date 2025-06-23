@@ -1,0 +1,14 @@
+vi /{scouter installed path}/server/startup.sh
+
+Scouter does not seem to support java version higher than 1.8.
+In this case, change the java path in the script.
+
+#####
+nohup /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.452.b09-2.el8.x86_64/jre/bin/java -Xmx1024m -classpath ./scouter-server-boot.jar scouter.boot.Boot ./lib > nohup.out &
+sleep 1
+tail -100 nohup.out
+#####
+
+Currently, the path of jdk 1.8 is /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.452.b09-2.el8.x86_64
+
+
