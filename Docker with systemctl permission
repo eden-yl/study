@@ -1,0 +1,26 @@
+출처 https://coding-orca.tistory.com/7
+
+#####
+docker run -i -t -d --privileged --name [컨테이너명] -p [포트포워딩 옵션] \
+-v [볼륨 옵션] rockylinux/rockylinux /usr/sbin/init
+
+예) docker run -i -t -d --privileged --name test_server -p 30000:80 \
+-v /data/volume/test:/data/test rockylinux/rockylinux /usr/sbin/init
+#####
+
+끝에 있는 
+"/usr/sbin/init" 는 usr/sbin/init을 컨테이너를 띄우면서 함께 실행하겠다는 건데,
+이 옵션과 --privileged 옵션이 함께 해야 내부에서 systemctl이 정상작동 하더라..
+-i -t 는 콘솔 인풋, 아웃풋 옵션이며 bash를 통해 명령어 입력/출력확인 시 꼭 필요한 옵션이다
+-d는 데몬으로 컨테이너를 돌리겠다는 것으로 
+docker run 명령어 실행시 갑작스레 해당 컨테이너로 접속되는 사태를 막아주는 옵션이다.
+
+#####
+docker exec -itu 0 [서버명] /bin/bash
+#####
+
+작업할 때마다 위 명령어를 통해 접속할 수 있다.
+여기셔 -i -t 옵션은 명령어 입/출력을 위해 꼭 필요한 옵션이며
+-u 0 옵션은 root계정으로 접속하겠다는 옵션이다.
+
+ 
