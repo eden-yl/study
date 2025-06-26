@@ -30,6 +30,22 @@ tar xvfz /wms/scouter/scouter-all-2.20.0.tar.gz
 
 #####
 
+# set up env path
+vi /etc/profile
+
+# when it's 1.8
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.452.b09-2.el8.x86_64
+export PATH=$PATH:$JAVA_HOME/jre/bin
+
+# when it's 17
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-17.0.15.0.6-2.el8.x86_64
+export PATH=$PATH:$JAVA_HOME/bin
+
+# apply
+source /etc/profile
+
+#####
+
 # set up agent
 vi /wms/scouter/agent.host/conf/scouter.conf
 
@@ -146,23 +162,6 @@ net_collector_tcp_port = 6100
 # profile_fullstack_hooked_exception_enabled = true
 # hook_exception_handler_method_patterns = my.AbstractAPIController.fallbackHandler,my.ApiExceptionLoggingFilter.handleNotFoundErrorResponse
 # hook_exception_hanlder_exclude_class_patterns = exception.BizException
-
-
-#####
-
-# set up env path
-vi /etc/profile
-
-# when it's 1.8
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.452.b09-2.el8.x86_64
-export PATH=$PATH:$JAVA_HOME/jre/bin
-
-# when it's 17
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-17.0.15.0.6-2.el8.x86_64
-export PATH=$PATH:$JAVA_HOME/bin
-
-# apply
-source /etc/profile
 
 #####
 
