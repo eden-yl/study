@@ -1,3 +1,14 @@
+# dnf install
+dnf -y update
+dnf -y install sudo
+dnf -y install procps
+dnf -y install net-tools
+dnf -y install file
+dnf -y install wget
+dnf -y install java-1.8.0-openjdk.x86_64
+dnf -y install java-17-openjdk.x86_64
+dnf -y install firewalld
+
 # open port for scouter
 sudo firewall-cmd --zone=public --add-port=6100/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=6100/udp --permanent
