@@ -205,6 +205,12 @@ log_dir = ./logs
 # 각종 카운터(선그래프값) 가 자동으로 지워지기전에 유지되는 날짜수
 # mgr_purge_counter_keep_days = 70
 
+# specify java version for server
+vi /wms/scouter/server/startup.sh
+nohup /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.452.b09-2.el8.x86_64/jre/bin/java -Xmx1024m -classpath ./scouter-server-boot.jar scouter.boot.Boot ./lib > nohup.out &
+sleep 1
+tail -100 nohup.out
+
 # run server
 cd /wms/scouter/server
 ./startup.sh
