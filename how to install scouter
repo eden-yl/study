@@ -220,5 +220,11 @@ cd /wms/scouter/server
 
 # run client
 상단 메뉴의 Collector > Management > Account > Add Account
+admin 외 새 계정 추가
+
+#####
+
+# set scouter as configuration when running spring boot jar
+sudo nohup /usr/bin/java -DSpring.profiles.active=local --javaagent:/home/mobyus/hm/scouter/agent.java/scouter.agent.jar -Dscouter.config=/home/mobyus/hm/scouter/agent.java/conf/scouter.conf -Dobj_name=wms-lffood-dev -jar /var/lib/jenkins/workspace/lf-wms-build/target/wms4-LFFOOD-0.0.1-SNAPSHOT.jar
 
 
