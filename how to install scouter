@@ -208,6 +208,7 @@ log_dir = ./logs
 # specify java version for server
 vi /wms/scouter/server/startup.sh
 nohup /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.452.b09-2.el8.x86_64/jre/bin/java -Xmx1024m -classpath ./scouter-server-boot.jar scouter.boot.Boot ./lib > nohup.out &
+nohup /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.fc35.x86_64/jre/bin/java -Xmx1024m -classpath ./scouter-server-boot.jar scouter.boot.Boot ./lib > nohup.out & ###(mobyus dev server)
 sleep 1
 tail -100 nohup.out
 
