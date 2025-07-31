@@ -1,3 +1,14 @@
+# dnf install
+dnf -y update
+dnf -y install sudo
+dnf -y install procps
+dnf -y install net-tools
+dnf -y install file
+dnf -y install wget
+dnf -y install java-1.8.0-openjdk.x86_64
+dnf -y install java-17-openjdk.x86_64
+dnf -y install firewalld
+
 # open port for scouter
 sudo firewall-cmd --zone=public --add-port=6100/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=6100/udp --permanent
@@ -16,6 +27,22 @@ wget https://github.com/scouter-project/scouter/releases/download/v2.20.0/scoute
 
 # unzip scouter
 tar xvfz /wms/scouter/scouter-all-2.20.0.tar.gz
+
+#####
+
+# set up env path
+vi /etc/profile
+
+# when it's 1.8
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.452.b09-2.el8.x86_64
+export PATH=$PATH:$JAVA_HOME/jre/bin
+
+# when it's 17
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-17.0.15.0.6-2.el8.x86_64
+export PATH=$PATH:$JAVA_HOME/bin
+
+# apply
+source /etc/profile
 
 #####
 
@@ -136,22 +163,6 @@ net_collector_tcp_port = 6100
 # hook_exception_handler_method_patterns = my.AbstractAPIController.fallbackHandler,my.ApiExceptionLoggingFilter.handleNotFoundErrorResponse
 # hook_exception_hanlder_exclude_class_patterns = exception.BizException
 
-
-#####
-
-# download jdk
-dnf install -y openjdk-XXX...
-
-# set up env path
-vi /etc/profile
-
-export JAVA_HOME=/usr/java/jdk1.8.0_202-amd64
-export PATH=$PATH:$JAVA_HOME/bin
-export CLASSPATH=$JAVA_HOME/jre/lib:$JAVA_HOME/lib/tools.jar
-
-# apply
-source /etc/profile
-
 #####
 
 # run scouter host
@@ -194,6 +205,13 @@ log_dir = ./logs
 # 각종 카운터(선그래프값) 가 자동으로 지워지기전에 유지되는 날짜수
 # mgr_purge_counter_keep_days = 70
 
+# specify java version for server
+vi /wms/scouter/server/startup.sh
+nohup /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.452.b09-2.el8.x86_64/jre/bin/java -Xmx1024m -classpath ./scouter-server-boot.jar scouter.boot.Boot ./lib > nohup.out &
+nohup /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.fc35.x86_64/jre/bin/java -Xmx1024m -classpath ./scouter-server-boot.jar scouter.boot.Boot ./lib > nohup.out & ###(mobyus dev server)
+sleep 1
+tail -100 nohup.out
+
 # run server
 cd /wms/scouter/server
 ./startup.sh
@@ -202,5 +220,11 @@ cd /wms/scouter/server
 
 # run client
 상단 메뉴의 Collector > Management > Account > Add Account
+admin 외 새 계정 추가
+
+#####
+
+# set scouter as configuration when running spring boot jar
+sudo nohup /usr/bin/java -DSpring.profiles.active=local --javaagent:/home/mobyus/hm/scouter/agent.java/scouter.agent.jar -Dscouter.config=/home/mobyus/hm/scouter/agent.java/conf/scouter.conf -Dobj_name=wms-lffood-dev -jar /var/lib/jenkins/workspace/lf-wms-build/target/wms4-LFFOOD-0.0.1-SNAPSHOT.jar
 
 
